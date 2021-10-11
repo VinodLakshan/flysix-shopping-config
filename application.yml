@@ -3,7 +3,6 @@ spring:
     url: jdbc:mysql://localhost:3306/rentACarDB?createDatabaseIfNotExist=true
     username: root
     password: 9696
-    driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
       naming:
