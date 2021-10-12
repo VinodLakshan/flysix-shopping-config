@@ -8,4 +8,13 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       dll-auto: update
-  
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+loggin:
+  level:
+    org:
+      hibernate:
+        type:
+          trace
