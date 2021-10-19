@@ -1,9 +1,17 @@
 server:
   port: 9191
-security:
-  oauth2:
-    resource:
-      token-info-uri: http://localhost:9199/oauth/check_token
-    client:
-      client-id: mobile
-      client-secret: pin
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          oauth2-client-credentials:
+            client-id: oauth2-client-credentials
+            client-secret: 5234c504-a9d9-4bd9-b40c-ca3c3515b208
+            scope: openid, profile, roles
+            authorization-grant-type: client_credentials
+        provider:
+          oauth2-client-credentials.issuer-uri: http://localhost:8180/auth/realms/master
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8180/auth/realms/master/protocol/openid-connect/certs
